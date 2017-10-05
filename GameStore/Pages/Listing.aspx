@@ -24,5 +24,14 @@
                 %>
         </div>
     </form>
+    <div>
+        <%
+            for (int i=0; i<= MaxPage; i++)
+            {
+                Response.Write(String.Format("<a href='/Pages/Listing.aspx?page={0}' {1} > {2}</a>",
+                    i, i == CurrentPage ? "class='selected'" : "", i));
+            }
+            %>
+    </div>
 </body>
 </html>
